@@ -9,107 +9,28 @@ namespace parsaspace.netcore.Models
     {
         public class ApitResult
         {
-            public ResultItems Result { get; set; }
-            public object Items { get; set; }
-
+            public string Result { get; set; }
+            public string Message { get; set; }
         }
         public class FileListResult
         {
-            public ResultItems Result { get; set; }
-            public FileListItemResult Items { get; set; }
+            public string Result { get; set; }
+            public FileListItemResult[] List { get; set; }
 
         }
+
         public class FileListItemResult
         {
             public string Name { get; set; }
             public bool IsFolder { get; set; }
-            public Int64 Size { get; set; }
-            public DateTime LastModified { get; set; }
+            public string Size { get; set; }
+            public string LastModified { get; set; }
 
         }
-        public class ResultItems
+        public class UploadResult
         {
-            public int StatusCode { get; set; }
-            public string Message { get; set; }
-        }
-        public class ReceiveMessageResult
-        {
-            public ResultItems Result { get; set; }
-            public IList<ReceiveMessageItems> Items { get; set; }
-        }
-
-        public class ReceiveMessageItems
-        {
-            public long messageid { get; set; }
-            public string message { get; set; }
-            public string linenumber { get; set; }
-            public DateTime receivedate { get; set; }
-        }
-        public class SendResult
-        {
-            public ResultItems Result { get; set; }
-            public IList<long> Items { get; set; }
-        }
-        public class StatusResult
-        {
-            public ResultItems Result { get; set; }
-            public IList<StatusItems> Items { get; set; }
-        }
-        public class StatusItems
-        {
-            public long messageId { get; set; }
-            public int status { get; set; }
-        }
-        public class GroupResult
-        {
-            public ResultItems Result { get; set; }
-            public AddGroupItem Items { get; set; }
-
-        }
-        public class AddGroupItem
-        {
-            public int GroupId { get; set; }
-        }
-
-        public class GroupNumbersResult
-        {
-            public ResultItems Result { get; set; }
-            public IList<GroupNumbersItem> Items { get; set; }
-        }
-        public class GroupNumbersItem
-        {
-            public string firstName { get; set; }
-            public string lastName { get; set; }
-            public string number { get; set; }
-            public string email { get; set; }
-        }
-        public class GroupListResult
-        {
-            public ResultItems Result { get; set; }
-            public IList<GroupListItem> Items { get; set; }
-        }
-
-        public class GroupListItem
-        {
-            public int Id { get; set; }
-            public string Name { get; set; }
-            public int Parent { get; set; }
-        }
-
-        public class SelectMessageResult
-        {
-            public ResultItems Result { get; set; }
-            public IList<SelectMessageItem> Items { get; set; }
-        }
-        public class SelectMessageItem
-        {
-            public long messageid { get; set; }
-            public string message { get; set; }
-            public int status { get; set; }
-            public int price { get; set; }
-            public string sender { get; set; }
-            public string receptor { get; set; }
-            public DateTime senddate { get; set; }
+            public string DownloadLink { get; set; }
+            public string Result { get; set; }
         }
     }
 }
