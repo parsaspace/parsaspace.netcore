@@ -1,7 +1,7 @@
 # Parsaspace.NET-Core
    Parsaspace .Net cross platform integration library
 ## Requirements
-    ASP.NET Core 2.1.0  or later.
+    ASP.NET Core 2  or later.
 ## Installation
   Install from [nuget](https://www.nuget.org/packages/parsaspace.netcore/)
   ### package manager
