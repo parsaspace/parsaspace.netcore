@@ -5,7 +5,7 @@ using System.Web;
 
 namespace parsaspace.netcore.Exceptions
 {
-    public class ApiException:GhasedakApiException 
+    public class ApiException:ParsaspaceException 
     {
         /// <summary>
         /// GhasedakApi error code
