@@ -7,7 +7,7 @@ namespace parsaspace.netcore.Models
 {
     public class Results
     {
-        public class ApitResult
+        public class ApiResult
         {
             public string Result { get; set; }
             public string Message { get; set; }

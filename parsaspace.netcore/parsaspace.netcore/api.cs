@@ -38,7 +38,7 @@ namespace parsaspace.netcore
             return JsonConvert.DeserializeObject<Models.Results.FileListResult>(await PostRequest(url, param));
         }
 
-        public async Task<Models.Results.ApitResult> Delete(string domain, string path)
+        public async Task<Models.Results.ApiResult> Delete(string domain, string path)
         {
             var url = "v1/files/remove";
             var param = new Dictionary<string, object>
@@ -46,10 +46,10 @@ namespace parsaspace.netcore
                   {"domain", domain},
                   { "path",path}
                };
-            return JsonConvert.DeserializeObject<Models.Results.ApitResult>(await PostRequest(url, param));
+            return JsonConvert.DeserializeObject<Models.Results.ApiResult>(await PostRequest(url, param));
         }
 
-        public async Task<Models.Results.ApitResult> Rename(string domain, string source, string destination)
+        public async Task<Models.Results.ApiResult> Rename(string domain, string source, string destination)
         {
             var url = "v1/files/rename";
             var param = new Dictionary<string, object>
@@ -58,10 +58,10 @@ namespace parsaspace.netcore
                   { "source",source},
                   {"destination",destination }
                };
-            return JsonConvert.DeserializeObject<Models.Results.ApitResult>(await PostRequest(url, param));
+            return JsonConvert.DeserializeObject<Models.Results.ApiResult>(await PostRequest(url, param));
         }
 
-        public async Task<Models.Results.ApitResult> Move(string domain, string source, string destination)
+        public async Task<Models.Results.ApiResult> Move(string domain, string source, string destination)
         {
             var url = "v1/files/move";
             var param = new Dictionary<string, object>
@@ -70,10 +70,10 @@ namespace parsaspace.netcore
                   { "source",source},
                   {"destination",destination }
                };
-            return JsonConvert.DeserializeObject<Models.Results.ApitResult>(await PostRequest(url, param));
+            return JsonConvert.DeserializeObject<Models.Results.ApiResult>(await PostRequest(url, param));
         }
 
-        public async Task<Models.Results.ApitResult> Copy(string domain, string source, string destination)
+        public async Task<Models.Results.ApiResult> Copy(string domain, string source, string destination)
         {
             var url = "v1/files/copy";
             var param = new Dictionary<string, object>
@@ -82,9 +82,9 @@ namespace parsaspace.netcore
                   { "source",source},
                   {"destination",destination }
                };
-            return JsonConvert.DeserializeObject<Models.Results.ApitResult>(await PostRequest(url, param));
+            return JsonConvert.DeserializeObject<Models.Results.ApiResult>(await PostRequest(url, param));
         }
-        public async Task<Models.Results.ApitResult> CreateFolder(string domain, string path)
+        public async Task<Models.Results.ApiResult> CreateFolder(string domain, string path)
         {
             var url = "v1/files/Createfolder";
             var param = new Dictionary<string, object>
@@ -92,9 +92,9 @@ namespace parsaspace.netcore
                   {"domain", domain},
                   { "path",path}
                };
-            return JsonConvert.DeserializeObject<Models.Results.ApitResult>(await PostRequest(url, param));
+            return JsonConvert.DeserializeObject<Models.Results.ApiResult>(await PostRequest(url, param));
         }
-        public async Task<Models.Results.ApitResult> RemoteUpload(string domain, string urls, string path = "", string filenames = "", string checkids = "")
+        public async Task<Models.Results.ApiResult> RemoteUpload(string domain, string urls, string path = "", string filenames = "", string checkids = "")
         {
             var url = "v1/remote/new";
             var param = new Dictionary<string, object>
@@ -105,7 +105,7 @@ namespace parsaspace.netcore
                   {"url",urls },
                   {"checkid",checkids }
                };
-            return JsonConvert.DeserializeObject<Models.Results.ApitResult>(await PostRequest(url, param));
+            return JsonConvert.DeserializeObject<Models.Results.ApiResult>(await PostRequest(url, param));
         }
 
         public Models.Results.UploadResult UploadFile(string domain, string uploadpath, string filepath)
@@ -129,14 +129,14 @@ namespace parsaspace.netcore
             return deserial.Deserialize<Models.Results.UploadResult>(response);
         }
 
-        public async Task<Models.Results.ApitResult> RemoteUploadStatus(int checkid)
+        public async Task<Models.Results.ApiResult> RemoteUploadStatus(int checkid)
         {
             var url = "v1/remote/status";
             var param = new Dictionary<string, object>
               {
                   {"checkid", checkid},
                };
-            return JsonConvert.DeserializeObject<Models.Results.ApitResult>(await PostRequest(url, param));
+            return JsonConvert.DeserializeObject<Models.Results.ApiResult>(await PostRequest(url, param));
         }
 
         private async Task<string> PostRequest(string url, Dictionary<string, object> parameters, string method = "POST", string contentType = "application/x-www-form-urlencoded")
