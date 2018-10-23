@@ -3,14 +3,16 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
     <Company>parsaspace</Company>
-    <Authors>parsaspace</Authors>
+    <Authors>saeid maroufi</Authors>
     <Description>parsaspace.netcore</Description>
-    <Copyright>Copyright (c) Parsaspace</Copyright>
+    <Copyright>Copyright (c) Parsaspace. 2018</Copyright>
     <PackageProjectUrl>https://parsaspace.com</PackageProjectUrl>
     <PackageIconUrl>https://parsaspace.com/Content/Web/assets/images/logo/logo-parsa-130-69-2.png</PackageIconUrl>
     <RepositoryUrl>https://github.com/parsaspace/parsaspace.netcore</RepositoryUrl>
-    <PackageReleaseNotes>NuGet 1.0.0 was released on October 20, 2018</PackageReleaseNotes>
-    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <PackageReleaseNotes>NuGet 1.0.1 was released on October 23, 2018</PackageReleaseNotes>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>1.0.1</Version>
+    <PackageId>parsaspace.netcore</PackageId>
   </PropertyGroup>
 
   <ItemGroup>
