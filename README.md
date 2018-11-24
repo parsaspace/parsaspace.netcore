@@ -53,9 +53,11 @@
 ```
 
 
-## راه های ارتباطی
+
 
 <div dir='rtl'>
+
+## راه های ارتباطی
 
 <a href="mailto:info@parsaspace.com" target="_top">info@parsaspace.com</a>
 
@@ -63,8 +65,6 @@
 
 تهران ، خیابان میرداماد ، خیابان البرز ، تابان شرقی ، ملکی سودمند ، پلاک 2 ، واحد 10
 </div>
-
-<hr>
 
 <div dir='rtl'>
 	
