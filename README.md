@@ -1,6 +1,4 @@
 # Parsaspace.NET-Core
-
-# <a href="https://api.parsaspace.com/">Parsaspace .NET Core RESTful API Document</a>
    Parsaspace .Net cross platform integration library
 ## Requirements
     ASP.NET Core 2  or later.
@@ -12,13 +10,12 @@
     dotnet add package parsaspace.netcore
 	
 ## Get ListFile
-لیست تمامی فایل ها و پوشه های مسیر مورد نظر را بر می گرداند
 
 ```c#
           try 
             {
                parsaspace.netcore.v1 parsaspace = new parsaspace.netcore.v1("your token");
-               var file = await  parsaspace.GetFileList("آدرس وب سایت", "/مسیر فایل ها");
+               var file = await  parsaspace.GetFileList("domain", "path");
                foreach (var item in file.List)
                {
                 Console.WriteLine(item.Name);
@@ -26,48 +23,47 @@
             }
             catch (parsaspace.netcore.Exceptions.ApiException ex)
             {
-			    // زمانی که مشکلی در اجرای سرویس فراخوانی شده وجود داشته باشد این خطا رخ می دهد 
                 Console.WriteLine(ex.Message);
             }
             catch (parsaspace.netcore.Exceptions.ConnectionException ex)
             {
-			    // زمانی که مشکلی در برقرای ارتباط با وب سرویس وجود داشته باشد این خطا رخ می دهد
                 Console.WriteLine(ex.Message);
             }  
 ```
 
 ## Upload File
-آپلود فایل جدید در مسیر دلخواه
 ```c#
           try 
             {
                parsaspace.netcore.v1 parsaspace = new parsaspace.netcore.v1("your token");
-               var res = await  parsaspace.UploadFile("آدرس وب سایت","مسیر آپلود","آدرس فایل");
+               var res = await  parsaspace.UploadFile("domain","uploadpath","filepath");
                if(res.Result=="true")
 			   {
-					Console.WriteLine(res.DownloadLink);
+			    Console.WriteLine(res.DownloadLink);
 			   }
             }
             catch (parsaspace.netcore.Exceptions.ApiException ex)
             {
-			    // زمانی که مشکلی در اجرای سرویس فراخوانی شده وجود داشته باشد این خطا رخ می دهد 
                 Console.WriteLine(ex.Message);
             }
             catch (parsaspace.netcore.Exceptions.ConnectionException ex)
             {
-			    // زمانی که مشکلی در برقرای ارتباط با وب سرویس وجود داشته باشد این خطا رخ می دهد
                 Console.WriteLine(ex.Message);
             }  
 ```
 
 
 ## Contribution
-راه های ارتباطی 
-<a href="mailto:info@parsaspace.com" target="_top">info@arsaspace.com</a>
+
+<div dir='rtl'>
+### راه های ارتباطی 
+
+<a href="mailto:info@parsaspace.com" target="_top">info@parsaspace.com</a>
 
 021 26423760  
 
 تهران ، خیابان میرداماد ، خیابان البرز ، تابان شرقی ، ملکی سودمند ، پلاک 2 ، واحد 10
+</div>
 
 <hr>
 
@@ -89,9 +85,9 @@
 
 
 ##
-![https://parsaspace.com/](https://cdn.parsaspace.com/parsaspace/new/img/logo.png)		
+![https://parsaspace.com](https://cdn.parsaspace.com/parsaspace/new/img/logo.png)		
 
-[https://parsaspace.com/](https://parsaspace.com/)	
+[https://parsaspace.com](https://parsaspace.com)	
 
 </div>
 
