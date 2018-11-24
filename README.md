@@ -9,29 +9,50 @@
 First You need to make an account on Parsaspace from <a href="https://parsaspace.com/register">Here</a>
 </p>
 <p>
-After that you just need to create website and  pick API-KEY up from <a href="https://parsaspace.com/profile">Profile</a> section.
-Install from [nuget](https://www.nuget.org/packages/parsaspace.netcore/)
-Use for every time.
+After that you just need to create website and pick API KEY up from <a href="https://parsaspace.com/profile">Profile</a> section.
 </p>
   Install from [nuget](https://www.nuget.org/packages/parsaspace.netcore/)
   ### package manager
     Install-Package  parsaspace.netcore -Version 1.0.0
   ### .NET CLI
     dotnet add package parsaspace.netcore
-    
+	
 ## Get ListFile
-لیست تمامی فایل ها و پوشه های مسیر مورد نظر کاربر را بر می گرداند.
-
+لیست تمامی فایل ها و پوشه های مسیر مورد نظر را بر می گرداند
 
 ```c#
           try 
             {
                parsaspace.netcore.v1 parsaspace = new parsaspace.netcore.v1("your token");
-               var file = await  parsaspace.GetFileList("آدرس وب سایت شما", "/مسیر فایل های مورد نظر");
+               var file = await  parsaspace.GetFileList("آدرس وب سایت", "/مسیر فایل ها");
                foreach (var item in file.List)
                {
                 Console.WriteLine(item.Name);
                }
+            }
+            catch (parsaspace.netcore.Exceptions.ApiException ex)
+            {
+			    // زمانی که مشکلی در اجرای سرویس فراخوانی شده وجود داشته باشد این خطا رخ می دهد 
+                Console.WriteLine(ex.Message);
+            }
+            catch (parsaspace.netcore.Exceptions.ConnectionException ex)
+            {
+			    // زمانی که مشکلی در برقرای ارتباط با وب سرویس وجود داشته باشد این خطا رخ می دهد
+                Console.WriteLine(ex.Message);
+            }  
+```
+
+## Upload File
+آپلود فایل جدید در مسیر دلخواه
+```c#
+          try 
+            {
+               parsaspace.netcore.v1 parsaspace = new parsaspace.netcore.v1("your token");
+               var res = await  parsaspace.UploadFile("آدرس وب سایت","مسیر آپلود","آدرس فایل");
+               if(res.Result=="true")
+			   {
+					Console.WriteLine(res.DownloadLink);
+			   }
             }
             catch (parsaspace.netcore.Exceptions.ApiException ex)
             {
