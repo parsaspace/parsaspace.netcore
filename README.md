@@ -5,12 +5,6 @@
 ## Requirements
     ASP.NET Core 2  or later.
 ## Installation
-<p>
-First You need to make an account on Parsaspace from <a href="https://parsaspace.com/register">Here</a>
-</p>
-<p>
-After that you just need to create website and pick API KEY up from <a href="https://parsaspace.com/profile">Profile</a> section.
-</p>
   Install from [nuget](https://www.nuget.org/packages/parsaspace.netcore/)
   ### package manager
     Install-Package  parsaspace.netcore -Version 1.0.0
