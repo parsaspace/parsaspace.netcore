@@ -5,7 +5,7 @@
 ## Installation
   Install from [nuget](https://www.nuget.org/packages/parsaspace.netcore/)
   ### package manager
-    Install-Package  parsaspace.netcore -Version 1.0.0
+    Install-Package  parsaspace.netcore
   ### .NET CLI
     dotnet add package parsaspace.netcore
 	
