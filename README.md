@@ -36,7 +36,7 @@
           try 
             {
                Parsaspace.NetCore.V1 parsaspace = new Parsaspace.NetCore.V1("your token");
-               var res = await  parsaspace.UploadFile("domain","uploadpath","filepath");
+               var res = parsaspace.UploadFile("domain","uploadpath","filepath");
                if(res.Result=="true")
 			   {
 			    Console.WriteLine(res.DownloadLink);
