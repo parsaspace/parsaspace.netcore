@@ -5,28 +5,33 @@ using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using System.Linq;
-using parsaspace.netcore.Models;
-using parsaspace.netcore.Exceptions;
+using Parsaspace.NetCore.Models;
+using Parsaspace.NetCore.Exceptions;
 using System.IO;
 using RestSharp;
 using RestSharp.Deserializers;
 using System.Net;
 
-namespace parsaspace.netcore
+namespace Parsaspace.NetCore
 {
-    public class v1
+    public class V1
     {
         private const string _BaseUrl = "https://api.parsaspace.com/";
+
         private readonly string _token;
+
         /// <summary>
         /// The HTTP client
         /// </summary>
+        /// 
         private HttpClient _httpClient;
-        public v1(string token)
+
+        public V1(string token)
         {
             _token = token;
             _httpClient = new HttpClient();
         }
+
         public async Task<Models.Results.FileListResult> GetFileList(string domain, string path)
         {
             var url = "v1/files/list";
@@ -84,9 +89,10 @@ namespace parsaspace.netcore
                };
             return JsonConvert.DeserializeObject<Models.Results.ApiResult>(await PostRequest(url, param));
         }
+
         public async Task<Models.Results.ApiResult> CreateFolder(string domain, string path)
         {
-            var url = "v1/files/Createfolder";
+            var url = "v1/files/createfolder";
             var param = new Dictionary<string, object>
               {
                   {"domain", domain},
@@ -94,6 +100,7 @@ namespace parsaspace.netcore
                };
             return JsonConvert.DeserializeObject<Models.Results.ApiResult>(await PostRequest(url, param));
         }
+
         public async Task<Models.Results.ApiResult> RemoteUpload(string domain, string urls, string path = "", string filenames = "", string checkids = "")
         {
             var url = "v1/remote/new";
@@ -159,6 +166,7 @@ namespace parsaspace.netcore
                 throw new ConnectionException(ex.Message);
             }
         }
+
         private FormUrlEncodedContent GetBodyData(Dictionary<string, object> parameters)
         {
             return new FormUrlEncodedContent(parameters.Select(x => new KeyValuePair<string, string>(x.Key, x.Value.ToString())));

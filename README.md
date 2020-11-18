@@ -1,31 +1,31 @@
-# Parsaspace.NET-Core
+# Parsaspace.NETCore
    Parsaspace .Net cross platform integration library
 ## Requirements
-    ASP.NET Core 2  or later.
+    ASP.NET Core 2.0  or later.
 ## Installation
-  Install from [nuget](https://www.nuget.org/packages/parsaspace.netcore/)
+  Install from [nuget](https://www.nuget.org/packages/Parsaspace.NetCore/)
   ### package manager
-    Install-Package  parsaspace.netcore
+    Install-Package  Parsaspace.NetCore
   ### .NET CLI
-    dotnet add package parsaspace.netcore
+    dotnet add package Parsaspace.NetCore
 	
 ## Get ListFile
 
 ```c#
           try 
             {
-               parsaspace.netcore.v1 parsaspace = new parsaspace.netcore.v1("your token");
+               Parsaspace.NetCore.V1 parsaspace = new Parsaspace.NetCore.V1("your token");
                var file = await  parsaspace.GetFileList("domain", "path");
                foreach (var item in file.List)
                {
                 Console.WriteLine(item.Name);
                }
             }
-            catch (parsaspace.netcore.Exceptions.ApiException ex)
+            catch (Parsaspace.NetCore.Exceptions.ApiException ex)
             {
                 Console.WriteLine(ex.Message);
             }
-            catch (parsaspace.netcore.Exceptions.ConnectionException ex)
+            catch (Parsaspace.NetCore.Exceptions.ConnectionException ex)
             {
                 Console.WriteLine(ex.Message);
             }  
@@ -35,18 +35,18 @@
 ```c#
           try 
             {
-               parsaspace.netcore.v1 parsaspace = new parsaspace.netcore.v1("your token");
+               Parsaspace.NetCore.V1 parsaspace = new Parsaspace.NetCore.V1("your token");
                var res = await  parsaspace.UploadFile("domain","uploadpath","filepath");
                if(res.Result=="true")
 			   {
 			    Console.WriteLine(res.DownloadLink);
 			   }
             }
-            catch (parsaspace.netcore.Exceptions.ApiException ex)
+            catch (Parsaspace.NetCore.Exceptions.ApiException ex)
             {
                 Console.WriteLine(ex.Message);
             }
-            catch (parsaspace.netcore.Exceptions.ConnectionException ex)
+            catch (Parsaspace.NetCore.Exceptions.ConnectionException ex)
             {
                 Console.WriteLine(ex.Message);
             }  
@@ -61,7 +61,7 @@
 
 <a href="mailto:info@parsaspace.com" target="_top">info@parsaspace.com</a>
 
- 26423760 021 
+ 74417100 021 
 
 تهران ، خیابان میرداماد ، خیابان البرز ، تابان شرقی ، ملکی سودمند ، پلاک 2 ، واحد 10
 </div>
@@ -84,7 +84,7 @@
 
 
 ##
-![https://parsaspace.com](https://cdn.parsaspace.com/parsaspace/new/img/logo.png)		
+![https://parsaspace.com](https://parsaspace.com/content/new/img/logo.png)		
 
 [https://parsaspace.com](https://parsaspace.com)	
 

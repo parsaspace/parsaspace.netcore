@@ -1,23 +1,29 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
-    <Company>parsaspace</Company>
-    <Authors>saeid maroufi</Authors>
-    <Description>parsaspace.netcore</Description>
-    <Copyright>Copyright (c) Parsaspace. 2018</Copyright>
-    <PackageProjectUrl>https://parsaspace.com</PackageProjectUrl>
-    <PackageIconUrl>https://parsaspace.com/Content/Web/assets/images/logo/logo-parsa-130-69-2.png</PackageIconUrl>
+    <Company>Parsaspace</Company>
+    <Authors>Parsaspace</Authors>
+    <Owners>Parsaspace</Owners>
+    <Description>A cross-platform library for Parsaspace hosting service; written in C#</Description>
+    <Copyright>Copyright (c) Parsaspace. 2020</Copyright>
+    <PackageProjectUrl>https://github.com/parsaspace/parsaspace.netcore</PackageProjectUrl>
+    <PackageIconUrl></PackageIconUrl>
     <RepositoryUrl>https://github.com/parsaspace/parsaspace.netcore</RepositoryUrl>
-    <PackageReleaseNotes>NuGet 1.0.1 was released on October 23, 2018</PackageReleaseNotes>
+    <PackageReleaseNotes>NuGet 1.0.2 was released on November 18, 2020</PackageReleaseNotes>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.0.1</Version>
-    <PackageId>parsaspace.netcore</PackageId>
+    <Version>1.0.2</Version>
+    <PackageId>Parsaspace.NetCore</PackageId>
+    <AssemblyName>Parsaspace.NetCore</AssemblyName>
+    <RootNamespace>Parsaspace.NetCore</RootNamespace>
+    <AssemblyVersion>1.0.2.0</AssemblyVersion>
+    <PackageTags>parsaspace,netcore,c#,hosting,download,upload,host download,host upload</PackageTags>
+    <PackageIcon></PackageIcon>
+    <Product>Parsaspace.NetCore</Product>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
     <PackageReference Include="RestSharp" Version="106.5.4" />
   </ItemGroup>
-
 </Project>

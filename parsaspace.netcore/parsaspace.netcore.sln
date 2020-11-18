@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2005
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "parsaspace.netcore", "parsaspace.netcore\parsaspace.netcore.csproj", "{43A5C0ED-4AFA-406D-AFB1-E5BA54EB6114}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Parsaspace.NetCore", "parsaspace.netcore\Parsaspace.NetCore.csproj", "{43A5C0ED-4AFA-406D-AFB1-E5BA54EB6114}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

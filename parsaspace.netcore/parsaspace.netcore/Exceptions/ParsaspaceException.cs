@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace parsaspace.netcore.Exceptions
+namespace Parsaspace.NetCore.Exceptions
 {
     public class ParsaspaceException : Exception
     {
