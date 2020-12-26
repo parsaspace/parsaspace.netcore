@@ -32,5 +32,21 @@ namespace Parsaspace.NetCore.Models
             public string DownloadLink { get; set; }
             public string Result { get; set; }
         }
+
+        public class RemoteListResult
+        {
+            public string Result { get; set; }
+            public string Message { get; set; }
+            public RemoteListItemResult[] List { get; set; }
+
+        }
+        public class RemoteListItemResult
+        {
+            public string Url { get; set; }
+            public string Status { get; set; }
+            public string FileName { get; set; }
+            public long DownloadSize { get; set; }
+
+        }
     }
 }

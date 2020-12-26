@@ -10,13 +10,15 @@
     <PackageProjectUrl>https://github.com/parsaspace/parsaspace.netcore</PackageProjectUrl>
     <PackageIconUrl></PackageIconUrl>
     <RepositoryUrl>https://github.com/parsaspace/parsaspace.netcore</RepositoryUrl>
-    <PackageReleaseNotes>NuGet 1.0.2 was released on November 18, 2020</PackageReleaseNotes>
+    <PackageReleaseNotes>NuGet 1.0.3 was released on December 26, 2020
+
+Remote upload status bug fixed.</PackageReleaseNotes>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.0.2</Version>
+    <Version>1.0.3</Version>
     <PackageId>Parsaspace.NetCore</PackageId>
     <AssemblyName>Parsaspace.NetCore</AssemblyName>
     <RootNamespace>Parsaspace.NetCore</RootNamespace>
-    <AssemblyVersion>1.0.2.0</AssemblyVersion>
+    <AssemblyVersion>1.0.3.0</AssemblyVersion>
     <PackageTags>parsaspace,netcore,c#,hosting,download,upload,host download,host upload</PackageTags>
     <PackageIcon></PackageIcon>
     <Product>Parsaspace.NetCore</Product>

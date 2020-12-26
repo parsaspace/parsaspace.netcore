@@ -136,14 +136,14 @@ namespace Parsaspace.NetCore
             return deserial.Deserialize<Models.Results.UploadResult>(response);
         }
 
-        public async Task<Models.Results.ApiResult> RemoteUploadStatus(int checkid)
+        public async Task<Models.Results.RemoteListResult> RemoteUploadStatus(int checkid)
         {
             var url = "v1/remote/status";
             var param = new Dictionary<string, object>
               {
                   {"checkid", checkid},
                };
-            return JsonConvert.DeserializeObject<Models.Results.ApiResult>(await PostRequest(url, param));
+            return JsonConvert.DeserializeObject<Models.Results.RemoteListResult>(await PostRequest(url, param));
         }
 
         private async Task<string> PostRequest(string url, Dictionary<string, object> parameters, string method = "POST", string contentType = "application/x-www-form-urlencoded")
